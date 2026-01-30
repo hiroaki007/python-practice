@@ -1,99 +1,53 @@
-# if 関連
 
-# x = -3
+# sandbox/basic/variables_control.py
+# 目的：変数 / if / for / while / break / continue の流れを理解する
 
-# if x > 0:
-#     x = 0
-#     print('Negative changed to zero')
-# elif x == 0:
-#     print('Zero')
-# elif x == -3:
-#     print('Single')
+# print("=== 1. 変数と if / elif / else ===")
+
+# score = 99
+
+# if score >= 80:
+#     result = "pass (A)"
+# elif score >= 60:
+#     result = "pass (B)"
 # else:
-#     print('More')
+#     result = "fail"
+
+# print(f"score={score}, result={result}")
 
 
-# for 学習
 
-# fruits = ["apple", "banana", "cherry"]
+# print("\n=== 2. for ループ + if ===")
 
-# for i, fruit in enumerate(fruits):
-#     print(i, fruit)
+# total = 0 
 
-
-# for i in range(1, 5):
-#     print(i)
-
-
-# fruits = ["apple", "banana", "orange"]
-
-# for fruit in fruits:
-#     print(fruit)
-
-
-# 0〜9 の中から 偶数だけ表示せよ。
-
-# for i in range(10):
+# for i in range(1, 6): 
 #     if i % 2 == 0:
-#         print(i)
+#         print(f"{i} is even → skip")
+#         continue
 
-
-## 問題4：合計を求める
-
-# 1〜10 の合計を計算して表示せよ。
-
-# total = 0
-
-# for i in range(1, 11):
+#     print(f"{i} is odd → add")
 #     total += i
-#     print(total)
+
+# print(f"total (odd only) = {total}")
 
 
-## 問題5：番号付きで表示
+# print("\n=== 3, while ループ + break ===")
 
-# 次のリストを
+# count = 0 
 
-# `0 apple`
-# `1 banana`
-# `2 orange`
+# while True:
+#     count += 1 
+#     print(f"count = {count}")
 
-# の形で表示せよ。
-
-
-# fruits = ["apple", "banana", "orange"]
-
-# for i, fruit in enumerate(fruits):
-#     print(i, fruit)
+#     if count >= 3:
+#         print("break loop")
+#         break
 
 
 
-# dictは 「名前（キー）→ 値」 の対応表。
-
-person = {
-    "name": "Taro",
-    "age": 20,
-    "job": "Engineer"
-}
-
-# print(person["name"], person["age"])
-
-# "name" → キー key
-# "Taro" → 値  person[key]
-
-# for key in person:
-#     print(key, person[key])
-
-# for key, value in person.items():
-#     print(key, value)
-
-
-
-# ログ一覧を１行ずつ処理する
-
-# logs = [" server started ", " user logged in ", " error occurred "]
-
-# for log in logs:
-#     print(f"LOG: {log}")
+# print("\n=== 4. まとめ ===")
+# print("処理は上から下へ流れ、条件によって分岐・繰り返しされる")
 
 
 
